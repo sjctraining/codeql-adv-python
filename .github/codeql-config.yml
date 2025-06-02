@@ -1,6 +1,6 @@
 # codeql-config.yml
 # This is a CodeQL configuration file.
-# It tells CodeQL where to find additional queries. 
+# It tells CodeQL where to find additional queries.. 
 
 queries:
   - name: custom-python-queries
