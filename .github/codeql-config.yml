@@ -1,0 +1,7 @@
+# codeql-config.yml
+# This is a CodeQL configuration file.
+# It tells CodeQL where to find additional queries.
+
+queries:
+  - name: custom-python-queries
+    uses: ./github/codeql/queries/python/  # NOTE: Relative path to your query directory
