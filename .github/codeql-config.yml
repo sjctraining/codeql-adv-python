@@ -4,4 +4,4 @@
 
 queries:
   - name: custom-python-queries
-    paths: ./.github/codeql/queries/python/  # NOTE: Relative path to your query directory
+    paths: ./codeql/queries/python/  # NOTE: Relative path to your query directory
