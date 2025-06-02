@@ -67,7 +67,7 @@ jobs:
           ls -R ${{ github.workspace }}
           # You might also want to focus on the .github/codeql/queries directory
           echo "Listing contents of custom queries directory:"
-          ls -R ${{ github.workspace }}/.github/codeql/queries/
+          ls -R ${{ github.workspace }}/.github/codeql/queries
     # --- DEBUGGING STEPS END HERE ---
 
     # Add any setup steps before running the `github/codeql-action/init` action.
