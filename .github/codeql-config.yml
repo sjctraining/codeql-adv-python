@@ -4,4 +4,4 @@
 
 queries:
   - name: custom-python-queries
-    uses: ./github/codeql/queries/python/  # NOTE: Relative path to your query directory
+    uses: .github/codeql/queries/python/alert_stop_assignment.ql  # NOTE: Relative path to your query directory
