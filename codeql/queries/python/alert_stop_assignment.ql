@@ -1,13 +1,18 @@
 /**
- * @name Always Alert
- * @description This query always raises an alert. Useful for testing CodeQL setup.
+ * @name Hardcoded STOP!! value in JC
+ * @description Detects assignment of the string "STOP!!" to the variable JC.
  * @kind problem
- * @problem.severity warning
- * @id python/always-alert
+ * @problem.severity error
+ * @id python/jc-stop-critical
  */
 
 import python
 
-from Module mod
-where mod.getName() = mod.getName()  // Always true
-select mod, "This is a test alert that always triggers..."
+from AssignExpr assign, Name var, Expr rhs
+where
+  assign.getTarget() = var and
+  var.getId() = "JC" and
+  assign.getValue() = rhs and
+  rhs instanceof StringConstant and
+  rhs.getStringValue() = "STOP!!"
+select assign, "Critical alert: JC is set to 'STOP!!'."

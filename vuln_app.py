@@ -5,6 +5,8 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+JC = "STOP!!"
+
 # 🚨 Vulnerability 1: Hardcoded credentials
 USERNAME = "admin"
 PASSWORD = "password123"
@@ -59,7 +61,7 @@ def redirect_user():
     from flask import redirect
     target = request.args.get('url')
     return redirect(target)
-    
+
 
 if __name__ == '__main__':
     app.run(debug=True)
