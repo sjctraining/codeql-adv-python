@@ -59,6 +59,7 @@ def redirect_user():
     from flask import redirect
     target = request.args.get('url')
     return redirect(target)
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
