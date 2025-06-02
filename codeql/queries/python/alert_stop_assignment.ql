@@ -10,4 +10,4 @@ import python
 
 from Module mod
 where mod.getName() = mod.getName()  // Always true
-select mod, "This is a test alert that always triggers."
+select mod, "This is a test alert that always triggers..."
