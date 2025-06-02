@@ -61,7 +61,7 @@ jobs:
     - name: Print current working directory
       run: pwd
 
-     - name: List repository contents recursively
+    - name: List repository contents recursively
       run: |
           echo "Listing contents of ${{ github.workspace }}:"
           ls -R ${{ github.workspace }}
@@ -69,7 +69,7 @@ jobs:
           echo "Listing contents of custom queries directory:"
           ls -R ${{ github.workspace }}/.github/codeql/queries/
     # --- DEBUGGING STEPS END HERE ---
-    
+
     # Add any setup steps before running the `github/codeql-action/init` action.
     # This includes steps like installing compilers or runtimes (`actions/setup-node`
     # or others). This is typically only required for manual builds.
